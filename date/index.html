@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Input Display</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: normal;
+    }
+
+    p {
+        margin: 10px 0 0;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #displayText {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #dateInput, #displayText {
+        text-align: center;
+    }
+
+    #dateInput {
+        margin-bottom: 20px;
+    }
+    
+   
+</style>
+</head>
+<body>
+    <input type="date" id="textInput" placeholder="Enter text...">
+    <button onclick="displayText()">Submit</button>
+    <p id="displayText"></p>
+
+    <script>
+        function displayText() {
+            var inputText = document.getElementById("textInput").value;
+            document.getElementById("displayText").innerText = "Mencari data tanggal " + inputText;
+        }
+    </script>
+</body>
+</html>

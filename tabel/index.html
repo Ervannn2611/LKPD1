@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #000000;
+        }
+        th {
+            background-color: rgb(238, 127, 127);
+            color: rgb(0, 0, 0);
+        }
+        .move {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">No</th>
+                <th rowspan="2">NIS</th>
+                <th rowspan="2">Nama</th>
+                <th rowspan="2">Rayon</th>
+                <th rowspan="2">JK</th>
+                <th colspan="2">Matrikulasi</th>
+                <th rowspan="2">Tepat Waktu</th>
+            </tr>
+            <tr>
+                <th>Speed Test</th>
+                <th>LKPD PHP</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>12410164</td>
+                <td>Aliffio Rizki Ananda</td>
+                <td>Cib 1</td>
+                <th>P</th>
+                <td>80</td>
+                <td>90</td>
+                <td><input type="checkbox" name="attendance1" id="attendance1_1"></td>
+            </tr>
+            <tr>
+                <td rowspan="2">2</td>
+                <td rowspan="2">12410179</td>
+                <td rowspan="2">Alsya Naila Kirana</td>
+                <td rowspan="2">Wik 4</td>
+                <th rowspan="2">P</th>
+                <td >77</td>
+                <td>64</td>
+                <td><input type="checkbox" name="attendance2" id="attendance1_2"></td>
+            </tr>
+            <tr>
+                <td colspan="2">Perlu perbaikan</td>
+                <td><input type="checkbox" name="" id=""></td>
+            </tr>
+            <tr>
+                <td rowspan="2">3</td>
+                <td rowspan="2">124110185</td>
+                <td rowspan="2">Andhika Rafi</td>
+                <td rowspan="2">Cis 7</td>
+                <th rowspan="2">L</th>
+                <td>78</td>
+                <td>60</td>
+                <td><input type="checkbox" name="attendance3" id="attendance1_3"></td>
+            </tr>
+            <tr>
+                <td colspan="2">Perlu perbaikan</td>
+                <td><input type="checkbox" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>12410195</td>
+                <td>Anya Khumaeni</td>
+                <td>Cic 10</td>
+                <th>L</th>
+                <td>77</td>
+                <td>64</td>
+                <td><input type="checkbox" name="attendance4" id="attendance1_4"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>12410272</td>
+                <td>Fadhlan Septian Ramadhan</td>
+                <td>Taj 6</td>
+                <th>L</th>
+                <td>75</td>
+                <td>77</td>
+                <td><input type="checkbox" name="attendance4" id="attendance1_4"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>12410186</td>
+                <td>Fariz Humam Muntasir</td>
+                <td>Cis 3</td>
+                <th>L</th>
+                <td>66</td>
+                <td>86</td>
+                <td><input type="checkbox" name="attendance4" id="attendance1_4"></td>
+            </tr>
+            <tr>
+               <td colspan="5" class="move"><b>Rata Rata Nilai</b></td> 
+               <td rowspan="6"><b>77.69</b></td>
+               <td rowspan="6"><b>75.33</b></td>
+               <th></th>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

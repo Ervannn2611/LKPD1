@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengubah</title>
+    <style>
+        #gambar {
+            transition: all 0.3s ease;
+        }
+        #opacity {
+            transition: all 0.3s ease;
+        }
+        #bentuk {
+            transition: all 0.3s ease;
+        }
+        #warna {
+            border-color: red, green, blue;
+        }
+    </style>
+</head>
+<body>
+    <div style="display:flex; justify-content:space-around; align-items:center; border:1px solid black; width:500px; margin:20px auto">
+        <img src="img/galeri 1.jpeg" alt="gambar1" width="200" height="200" id="gambar">
+        <form action="" style="display:flex; flex-direction:column">
+            <label for="gambar-select">Pilih Gambar</label>
+            <select name="gambar" id="gambar-select">
+                <option value="img/galeri 1.jpeg">Gambar 1</option>
+                <option value="img/galeri 2.jpeg">Gambar 2</option>
+                <option value="img/galeri 3.jpeg">Gambar 3</option>
+            </select>
+            <label for="bentuk">Pilih Bentuk</label>
+            <select name="bentuk" id="bentuk">
+                <option value="lingkaran">Lingkaran</option>
+                <option value="kotak">Kotak</option>
+                <option value="segitiga">Segitiga</option>
+            </select>
+            <label for="warna">Pilih Warna</label>
+            <select name="warna" id="warna">
+                <option value="merah">Merah</option>
+                <option value="kuning">Kuning</option>
+                <option value="hijau">Hijau</option>
+            </select>
+            <label for="opacity-select">Pilih Opacity</label>
+            <select name="opacity" id="opacity-select">
+                <option value="0.3">0.3</option>
+                <option value="0.5">0.5</option>
+                <option value="0.7">0.7</option>
+            </select>
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+    <script>
+        const gambar = document.getElementById('gambar');
+        const form = document.querySelector('form');
+        const gambarSelect = document.getElementById('gambar-select');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const bentuk = document.getElementById('bentuk').value;
+            const warna = document.getElementById('warna').value;
+            const opacity = document.getElementById('opacity-select').value;
+
+            gambar.src = gambarSelect.value;
+
+            if (bentuk === 'lingkaran') {
+                gambar.style.borderRadius = '50%';
+                gambar.style.clipPath = 'none';
+                gambar.style.border = 'none';
+            } else if (bentuk === 'kotak') {
+                gambar.style.borderRadius = '0';
+                gambar.style.clipPath = 'none';
+                gambar.style.border = `2px solid ${warna}`;
+            } else if (bentuk === 'segitiga') {
+                gambar.style.borderRadius = '0';
+                gambar.style.border = 'none';
+                gambar.style.clipPath = `polygon(50% 0%, 100% 100%, 0% 100%)`;
+            } else {
+                gambar.style.borderRadius = '0';
+                gambar.style.border = 'none';
+                gambar.style.clipPath = 'none';
+            }
+
+            switch(warna) {
+                case 'merah':
+                    gambar.style.backgroundColor = 'red';
+                    break;
+                case 'kuning':
+                    gambar.style.backgroundColor = 'yellow';
+                    break;
+                case 'hijau':
+                    gambar.style.backgroundColor = 'green';
+                    break;
+            }
+            gambar.style.backgroundColor = warna;
+
+            gambar.style.opacity = opacity;
+        });     
+    </script>
+</body>
+</html>
